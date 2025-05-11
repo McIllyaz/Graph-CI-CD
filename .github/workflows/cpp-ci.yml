@@ -1,0 +1,23 @@
+name: C++ CI Pipeline
+
+on: 
+  push:
+  pull_request:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Install build-essential (compiler)
+      run: sudo apt update && sudo apt install -y build-essential
+
+    - name: Compile C++ Program
+      run: g++ -o graph graph_5156.cpp
+
+    - name: Run C++ Program with Input (Simulasi)
+      run: echo -e "3\n2\n1\n2\n2\n3" | ./graph
+
