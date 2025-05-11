@@ -19,7 +19,7 @@ int main(){
 	}	
 	
 	for(int i = 1; i <= jumlah_edge; i++){
-		cout << "Vertex sumber: "
+		cout << "Vertex sumber: ";
 		cin >> sumber;
 		cout << "Vertex tujuan: ";
 		cin >> tujuan;
